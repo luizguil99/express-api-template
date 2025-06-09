@@ -13,8 +13,12 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "@prisma/client": "^6.9.0",
     "express": "^5.1.0",
     "nodemon": "^3.1.10",
     "sucrase": "^3.35.0"
+  },
+  "devDependencies": {
+    "prisma": "^6.9.0"
   }
 }

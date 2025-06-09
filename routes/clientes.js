@@ -5,7 +5,7 @@ import autenticarToken from '../middlewares/autenticarToken.js';
 const router = Router();
 
 // GET /clientes
-router.get('/', autenticarToken, listar);
+router.get('/',  listar);
 
 // GET /clientes/:id
 router.get('/:id', buscarPorId);
