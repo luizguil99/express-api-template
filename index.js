@@ -1,9 +1,9 @@
-const express = require('express');
-const clientesRouter = require('./routes/clientes');
+import express from 'express';
+import clientesRouter from './routes/clientes.js';
+
 const app = express();
+
 app.use(express.json());
-
-
 app.use('/clientes', clientesRouter);
 
 app.listen(3000, () => {

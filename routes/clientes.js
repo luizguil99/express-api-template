@@ -1,21 +1,21 @@
-const express = require('express');
+import express from 'express';
+import { listar, buscarPorId, criarCliente, atualizar, deletar } from '../controllers/clientesController.js';
+
 const router = express.Router();
-const clientesController = require('../controllers/clientesController');
-const autenticarToken = require('../middlewares/autenticarToken');
 
 // GET /clientes
-router.get('/', autenticarToken, clientesController.listar);
+router.get('/', listar);
 
 // GET /clientes/:id
-router.get('/:id', clientesController.buscarPorId);
+router.get('/:id', buscarPorId);
 
 // POST /clientes
-router.post('/',  clientesController.criarCliente);
+router.post('/', criarCliente);
 
 // PUT /clientes/:id
-router.put('/:id', clientesController.atualizar);
+router.put('/:id', atualizar);
 
 // DELETE /clientes/:id
-router.delete('/:id', clientesController.deletar);
+router.delete('/:id', deletar);
 
-module.exports = router;
+export default router;
