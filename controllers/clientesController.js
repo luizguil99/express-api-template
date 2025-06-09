@@ -32,4 +32,6 @@ export const deletar = (req, res) => {
   clientes = clientes.filter(c => c.id != req.params.id);
   res.status(204).send();
 };
+
+export default { listar, buscarPorId, criarCliente, atualizar, deletar };
   

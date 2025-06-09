@@ -1,7 +1,7 @@
 import express from 'express';
 import clientesRouter from './routes/clientes.js';
 
-const app = express();
+import app from 'express';
 
 app.use(express.json());
 app.use('/clientes', clientesRouter);
