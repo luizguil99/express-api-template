@@ -3,5 +3,5 @@ function logRequisicao(req, res, next) {
     next();
   }
   
-  module.exports = logRequisicao;
+  export default logRequisicao;
   

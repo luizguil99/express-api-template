@@ -1,10 +1,11 @@
 import express from 'express';
 import { listar, buscarPorId, criarCliente, atualizar, deletar } from '../controllers/clientesController.js';
+import autenticarToken from '../middlewares/autenticarToken.js';
 
 const router = express.Router();
 
 // GET /clientes
-router.get('/', listar);
+router.get('/', autenticarToken, listar);
 
 // GET /clientes/:id
 router.get('/:id', buscarPorId);

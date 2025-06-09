@@ -6,5 +6,5 @@ function validarNome(req, res, next) {
     next();
   }
   
-  module.exports = validarNome;
+  export default validarNome;
   
